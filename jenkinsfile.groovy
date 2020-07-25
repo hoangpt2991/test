@@ -39,11 +39,8 @@ pipeline {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')
         {
             echo "Stage2"
-            sh 
-            '''
-            eeeeeeeeeeeeeeeeeeeeeeeeeee
-            exit 1
-            '''
+            sh "exit 1"
+            
         }
     }
 }
