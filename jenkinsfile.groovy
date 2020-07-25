@@ -16,7 +16,7 @@ pipeline {
                           extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: '/script']]]],
                           submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/hoangpt2991/test.git']]])
                 sh '''
-                cd /script && ls
+                cd ${WORKSPACE}/script && ls
                '''
             }
         }
