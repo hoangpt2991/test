@@ -28,7 +28,7 @@ pipeline {
                echo "deploy"
                 sh '''
                 cd ${WORKSPACE}/script && ls
-                ./ping2.sh
+                bash ping2.sh
                '''
             }
         }
