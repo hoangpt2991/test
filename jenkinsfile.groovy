@@ -32,5 +32,24 @@ pipeline {
                '''
             }
         }
+        stage('StageName1')
+        {
+    steps
+    {
+        catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')
+        {
+            echo "Stage2"
+            kdljfldasjldkfjlasjfldksfjlflkdslkl
+            exit 1
+        }
+    }
+}
+stage('StageName2')
+{
+    steps
+    {
+        echo "Stage2"
+    }
+}
     }
 }
