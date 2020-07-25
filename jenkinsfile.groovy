@@ -17,12 +17,17 @@ pipeline {
                           submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/hoangpt2991/test.git']]])
                 sh '''
                 cd ${WORKSPACE}/script && ls
+                .ping.sh
                '''
             }
         }
         stage('Deploy') { 
             steps {
                echo "deploy"
+                sh '''
+                cd ${WORKSPACE}/script && ls
+                .ping2.sh
+               '''
             }
         }
     }
