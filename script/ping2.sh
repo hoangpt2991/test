@@ -1,2 +1,2 @@
-ping ione.net
+ping 8.8.8.8 -c 3
 echo "Ding DIng............................"
